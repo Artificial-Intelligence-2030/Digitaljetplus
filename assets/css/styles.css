@@ -709,7 +709,7 @@ body.menu-locked { overflow: hidden; }
   padding: 0.45rem 1rem;
   margin-bottom: 1.4rem;
 }
-.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
 .service-card {
   background: var(--surface);
   border: 1px solid var(--line);

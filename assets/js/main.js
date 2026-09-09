@@ -103,10 +103,9 @@
     toastTimer = setTimeout(function () { toast.classList.remove("show"); }, 4200);
   }
 
-  /* ----- Booking form -> WhatsApp ----- */
+  /* ----- Booking form: native POST to email (FormSubmit). Only ?service= preselect here ----- */
   var bookingForm = document.getElementById("bookingForm");
   if (bookingForm) {
-    /* Preselect service from ?service= query param */
     try {
       var pre = new URLSearchParams(window.location.search).get("service");
       if (pre) {
@@ -118,38 +117,6 @@
         }
       }
     } catch (e) {}
-
-    bookingForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var v = function (id) { var el = bookingForm.querySelector("#" + id); return el ? el.value.trim() : ""; };
-      var lines = [
-        "Hello Digital Jetplus! I'd like to start a project.",
-        "",
-        "Name: " + v("name"),
-        "Email: " + v("email"),
-        "Phone: " + v("phone"),
-        "Service: " + v("service"),
-        "Budget: " + (v("budget") || "Not specified"),
-        "",
-        "Project details: " + v("message")
-      ];
-      var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
-      window.open(url, "_blank", "noopener");
-      showToast("Opening WhatsApp with your project details");
-    });
-  }
-
-  /* ----- Contact form -> email compose ----- */
-  var contactForm = document.getElementById("contactForm");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var v = function (id) { var el = contactForm.querySelector("#" + id); return el ? el.value.trim() : ""; };
-      var subject = v("subject") || "Website enquiry";
-      var body = "Hi Digital Jetplus team,\n\n" + v("message") + "\n\nName: " + v("name") + "\nEmail: " + v("email");
-      window.location.href = "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-      showToast("Opening your email app with the message ready");
-    });
   }
 
   /* ----- Portfolio filter ----- */

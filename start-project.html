@@ -65,7 +65,7 @@
                     <a href="index.html">Home</a><span class="sep">/</span><span>Start a project</span>
                 </nav>
                 <h1>Let's get started</h1>
-                <p class="lede">Fill in the form and it will open in WhatsApp with your details ready to send. We reply within one business day with next steps.</p>
+                <p class="lede">Fill in the form and it lands directly in our inbox. We reply within one business day with next steps.</p>
             </div>
         </section>
 
@@ -73,7 +73,11 @@
             <div class="container contact-grid">
                 <div class="form-card reveal">
                     <h2 style="font-size:1.4rem; margin-bottom:1.6rem">Tell us about your project</h2>
-                    <form id="bookingForm" novalidate>
+                    <form id="bookingForm" action="https://formsubmit.co/omulebrianfredrick@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New project request from the Digital Jetplus website">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
                         <div class="form-grid">
                             <div class="field">
                                 <label for="name">Full name <span class="req">*</span></label>
@@ -96,6 +100,7 @@
                                     <option value="Social Media Management - Premium (UGX 1,800,000/mo)">Social Media - Premium (UGX 1,800,000/mo)</option>
                                     <option value="Web Development">Web Development</option>
                                     <option value="Mobile App Development">Mobile App Development</option>
+                                    <option value="AI Automation &amp; Development">AI Automation &amp; Development</option>
                                     <option value="Digital Marketing">Digital Marketing</option>
                                     <option value="SEO Services">SEO Services</option>
                                     <option value="PPC Advertising">PPC Advertising</option>
@@ -122,10 +127,10 @@
                                 <textarea id="message" name="message" rows="5" required placeholder="Tell us about your business, your goals, and what success looks like..."></textarea>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block" style="margin-top:1.4rem">Send via WhatsApp
+                        <button type="submit" class="btn btn-primary btn-block" style="margin-top:1.4rem">Request a quote
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
                         </button>
-                        <p class="form-note">Prefer email? Send the same details to <a href="mailto:omulebrianfredrick@gmail.com" style="color:var(--accent)">omulebrianfredrick@gmail.com</a>.</p>
+                        <p class="form-note">Your request goes straight to our inbox. Prefer instant chat? <a href="https://wa.me/256702634715" target="_blank" rel="noopener" style="color:var(--accent)">Message us on WhatsApp</a>.</p>
                     </form>
                 </div>
 
@@ -176,6 +181,7 @@
                     <li><a href="content-writing.html">Content Writing</a></li>
                     <li><a href="ppc.html">PPC Advertising</a></li>
                     <li><a href="mobile-apps.html">Mobile Apps</a></li>
+                    <li><a href="ai-automation.html">AI Automation</a></li>
                     <li><a href="business-consulting.html">Business Consulting</a></li>
                 </ul>
             </div>

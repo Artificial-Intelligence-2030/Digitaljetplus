@@ -110,8 +110,12 @@
 
                 <div class="form-card reveal" style="--d:.12s">
                     <h2 style="font-size:1.4rem; margin-bottom:0.5rem">Send us a message</h2>
-                    <p style="color:var(--muted); font-size:0.94rem; margin-bottom:1.8rem">Fill this in and your email app will open with the message ready to send.</p>
-                    <form id="contactForm" novalidate>
+                    <p style="color:var(--muted); font-size:0.94rem; margin-bottom:1.8rem">Your message goes straight to our inbox - no email app needed.</p>
+                    <form id="contactForm" action="https://formsubmit.co/omulebrianfredrick@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New enquiry from the Digital Jetplus website">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
                         <div class="form-grid">
                             <div class="field">
                                 <label for="name">Name <span class="req">*</span></label>
@@ -133,7 +137,7 @@
                         <button type="submit" class="btn btn-primary btn-block" style="margin-top:1.4rem">Send message
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
                         </button>
-                        <p class="form-note">We use your details only to reply to your enquiry. No lists, no spam.</p>
+                        <p class="form-note">Your message lands directly in our inbox. We reply within one business day.</p>
                     </form>
                 </div>
             </div>
@@ -159,6 +163,7 @@
                     <li><a href="content-writing.html">Content Writing</a></li>
                     <li><a href="ppc.html">PPC Advertising</a></li>
                     <li><a href="mobile-apps.html">Mobile Apps</a></li>
+                    <li><a href="ai-automation.html">AI Automation</a></li>
                     <li><a href="business-consulting.html">Business Consulting</a></li>
                 </ul>
             </div>
